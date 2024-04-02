@@ -5,7 +5,7 @@ import './App.css'
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import Gallery from './Gallery.jsx'
-
+import allBeasts from './data.json'
 function App() {
 
   //const count=0
@@ -20,7 +20,9 @@ function App() {
         name = "Ryan"
         place = "OKC"
       />
-      <Gallery/>
+      <Gallery
+        allBeasts={allBeasts}
+      />
 
       <Footer/>
       
