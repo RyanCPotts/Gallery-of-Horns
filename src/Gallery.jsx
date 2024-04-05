@@ -1,7 +1,13 @@
 /* eslint-disable react/prop-types */
+import React from 'react';
 import HornedBeast from './HornedBeast.jsx'
 
-function Gallery(props) {
+function Gallery({ allBeasts, updateCount}) {
+
+    
+
+    
+
     // const beastOne={
     //     title:'beast One',
     //     imageUrl:'https://files.worldwildlife.org/wwfcmsprod/images/Black_Rhino_in_Desert_WW176409/portrait_overview/8vo3llqoyc_Black_Rhino_in_Desert_WW176409.jpg',
@@ -16,16 +22,17 @@ function Gallery(props) {
 
     // }
 
-    console.log(props.allBeasts)
+    console.log(allBeasts)
     // loop over allBeasts data and render HornedBeast component for every beast
     // Map over allBeasts data and render a HornedBeast component for each beast
     
-    const beastComponents = props.allBeasts.map((beast, index) => (
+    const beastComponents = allBeasts.map((beast, index) => (
         <HornedBeast
             key={index} // Remember to provide a unique key for each component in the array
             title={beast.title}
             imageUrl={beast.image_url}
             description={beast.description}
+            updateCount={updateCount}
         />
     ));
     
