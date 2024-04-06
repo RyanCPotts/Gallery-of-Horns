@@ -2,7 +2,7 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.jsx'
 
-function Gallery({ allBeasts, updateCount, count}) {
+function Gallery({ allBeasts, updateCount, count, onBeastSelect}) {
 
     
 
@@ -30,10 +30,12 @@ function Gallery({ allBeasts, updateCount, count}) {
         <HornedBeast
             key={index} // Remember to provide a unique key for each component in the array
             title={beast.title}
+            beast={beast}
             imageUrl={beast.image_url}
             description={beast.description}
             count={count}
             updateCount={updateCount}
+            onBeastSelect={onBeastSelect}
         />
     ));
     

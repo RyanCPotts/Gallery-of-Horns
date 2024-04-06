@@ -7,6 +7,8 @@ import Footer from './Footer.jsx'
 import Gallery from './Gallery.jsx'
 import allBeasts from './data.json'
 import SelectedBeast from './SelectedBeast.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
 
   //const count=0
