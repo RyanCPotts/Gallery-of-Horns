@@ -2,7 +2,7 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.jsx'
 
-function Gallery({ allBeasts, updateCount}) {
+function Gallery({ allBeasts, updateCount, count}) {
 
     
 
@@ -32,6 +32,7 @@ function Gallery({ allBeasts, updateCount}) {
             title={beast.title}
             imageUrl={beast.image_url}
             description={beast.description}
+            count={count}
             updateCount={updateCount}
         />
     ));

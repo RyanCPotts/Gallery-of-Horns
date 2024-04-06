@@ -14,9 +14,13 @@ function App() {
   const [count, setCount] = useState(0)
   const [selectedBeast, setSelectedBeast] = useState(null); // State to track selected beast
 
-  const updateCount = (newCount => {
-    setCount(newCount)
-  })
+  // const updateCount = (newCount => {
+  //   setCount(newCount+1)
+  // })
+
+  function updateCount(){
+    setCount(count+1);
+  }
 
   const handleBeastSelect = (beast) => {
     setSelectedBeast(beast); // Update selectedBeast state
@@ -36,6 +40,7 @@ function App() {
       />
       <Gallery
         allBeasts={allBeasts}
+        count={count}
         updateCount={updateCount}
         onBeastSelect={handleBeastSelect} // Pass handleBeastSelect function to Gallery
       />
